@@ -7,7 +7,7 @@ to localize the root cause of a fault. In this study we introduce GloBug, which
 consists of a set of methods that enable exploitation of global data (opensource
 software projects) in an automated fault localization technique. In this
 study we investigate two heuristics. First, we introduce GlobalBugLocator in
-which we study the eect of global data on a current state-of-the-art technique
+which we study the efect of global data on a current state-of-the-art technique
 namely BugLocator. Next, we investigate the application of a Word
 Embedding technique (Doc2Vec) on fault localization. Our results show that
 GlobalBugLocator outperforms BugLocator with an average rate of 14% in
