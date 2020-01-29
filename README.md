@@ -1,3 +1,5 @@
+<img src="GloBug.png">
+
 # GloBug
 Fault localization is an important task in software debugging. Fault localization
 is mostly manual in the current practice. Many methods have been
