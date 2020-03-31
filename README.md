@@ -1,24 +1,5 @@
 <img src="GloBug.png">
 
 # GloBug
-Fault localization is an important task in software debugging. Fault localization
-is mostly manual in the current practice. Many methods have been
-proposed over years to automate the process of fault localization. However,
-the current methods only consider the local data of software system in order
-to localize the root cause of a fault. In this study we introduce GloBug, which
-consists of a set of methods that enable exploitation of global data (opensource
-software projects) in an automated fault localization technique. In this
-study we investigate two heuristics. First, we introduce GlobalBugLocator in
-which we study the efect of global data on a current state-of-the-art technique
-namely BugLocator. Next, we investigate the application of a Word
-Embedding technique (Doc2Vec) on fault localization. Our results show that
-GlobalBugLocator outperforms BugLocator with an average rate of 14% in
-terms of MRR (Mean Reciprocal Rank) and MAP (Mean Average Precision)
-in 64% and 54% of the cases, respectively. Also, GlobalBugLocator improves
-the mean performance of BugLocator with average rates of 6.6% and 4.8% in
-terms of MRR and MAP when applied to 51 software projects. This amount of
-improvement is signicant compared to the improvement rates of other state-of-the-art methods. Although Word Embedding can improve the localization
-accuracy in some cases, our study shows that a complex solution is not always
-efective and in some cases with adding too much complexity, decreases the
-performance of the simpler methods. Therefore, application of a fault localization method in a software system must be accompanied with careful analysis
-and study of software characteristics.
+Fault Localization  (FL) is  an  important  first step  in  software  debugging and is mostly manual in the current practice. Many methods have been proposed over years to automate the FL process, including information retrieval (IR)-based techniques. These methods localize the fault based on the similarity of the reported bug report and the source code.  Newer variations of IR-based FL (IRFL) techniques also look into the history of bug reports and leverage them during the localization. However, all  existing IRFL techniques limit themselves to the current project's data (local data). In this study, we introduce Globug, which is an IRFL framework consisting of methods that use models pre-trained on the global data (extracted from open-source benchmark projects). In Globug, we investigate two heuristics: a) the effect of global data on a state-of-the-art IR-FL technique, namely BugLocator, and b) the application of a Word Embedding technique (Doc2Vec) together with global data. 
+Our large scale experiment on 51 software projects shows that using global data improves BugLocator on average 6.6% and 4.8% in terms of MRR (Mean Reciprocal Rank) and MAP (Mean Average Precision), with over 14% in majority (64% and 54% in terms of MRR and MAP, respectively) of the cases. This amount of improvement is significant compared to the improvement rates that five other state-of-the-art IRFL tools provide over BugLocator. In addition, training the models globally is a one-time offline task with no overhead on BugLocator's run-time fault localization. Our study, however, shows that a Word Embedding-based global solution did not further improve the results. 
